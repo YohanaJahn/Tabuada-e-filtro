@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="filtro.css">
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="inputNome" placeholder="Digite um nome">
+        <div id="valor-form">
+            <ul id="listaNomes">
+                <li>
+                    <p>Lucas Silva</p>
+                </li>
+                <li>
+                    <p>Juliana Oliveira</p>
+                </li>
+                <li>
+                    <p>Marcos Santos</p>
+                </li>
+                <li>
+                    <p>Carolina Lima</p>
+                </li>
+                <li>
+                    <p>Rafael Pereira</p>
+                </li>
+                <li>
+                    <p>Mariana Souza</p>
+                </li>
+                <li>
+                    <p>Pedro Oliveira</p>
+                </li>
+                <li>
+                    <p>Larissa Almeida</p>
+                </li>
+                <li>
+                    <p>Thiago Pereira</p>
+                </li>
+                <li>
+                    <p>Fernanda Silva</p>
+                </li>
+                <li>
+                    <p>Gustavo Rodrigues</p>
+                </li>
+                <li>
+                    <p>Bruna Oliveira</p>
+                </li>
+                <li>
+                    <p>João Santana</p>
+                </li>
+                <li>
+                    <p>Camila Fernandes</p>
+                </li>
+                <li>
+                    <p>Felipe Silva</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+            const inputNome = document.getElementById('inputNome');
+            const listaNomes = document.getElementById('listaNomes');
+
+            inputNome.addEventListener('input', function () {
+                const nomeDig = inputNome.value.toLowerCase();
+                const nomes = listaNomes.getElementsByTagName('li');
+
+                for (let i = 0; i < nomes.length; i++) {
+                    const nome = nomes[i].textContent.toLowerCase();
+
+                    if (nome.includes(nomeDig)) {
+                        nomes[i].innerHTML = nome.replace(nomeDig, '<b>' + nomeDig + '</b>');
+                    } else {
+                        nomes[i].innerHTML = nome;
+                    }
+                }
+            });
+
+    </script>
+</body>
+
+</html>

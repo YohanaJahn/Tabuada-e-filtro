@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #4F638C;
+}
+
+#container {
+    max-width: 450px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 4%;
+    margin-left: 35%;
+    background-color: #5D75A6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#inputNome {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+ul#listaNomes {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul#listaNomes li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+ul#listaNomes li b {
+    font-weight: bold;
+    color: #f77777;
+}
